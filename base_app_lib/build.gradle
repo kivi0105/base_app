@@ -1,10 +1,8 @@
 apply plugin: 'com.android.library'
 
-ext {
-    PUBLISH_GROUP_ID = 'com.kivi.android'
-    PUBLISH_ARTIFACT_ID = 'base_app_lib'
-    PUBLISH_VERSION = '0.0.1'
-}
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.kivi'
 
 
 android {
@@ -37,4 +35,3 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
