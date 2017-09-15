@@ -9,7 +9,7 @@ import android.content.Context;
 public class DensityUtil {
 
     /**
-     * px值转dp
+     * px to dp
      * @param context
      * @param pxValue
      * @return
@@ -20,7 +20,7 @@ public class DensityUtil {
     }
 
     /**
-     * dp值转px
+     * dp to px
      * @param context
      * @param dipValue
      * @return
@@ -31,7 +31,7 @@ public class DensityUtil {
     }
 
     /**
-     * px值转sp
+     * px to sp
      * @param context
      * @param pxValue
      * @return
@@ -42,7 +42,7 @@ public class DensityUtil {
     }
 
     /**
-     * sp值转px
+     * sp to px
      * @param context
      * @param spValue
      * @return

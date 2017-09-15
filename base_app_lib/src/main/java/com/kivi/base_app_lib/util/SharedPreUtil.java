@@ -7,6 +7,7 @@ import com.kivi.base_app_lib.base.BaseConfig;
 
 
 /**
+ * SharedPreferences util
  * @description:
  */
 

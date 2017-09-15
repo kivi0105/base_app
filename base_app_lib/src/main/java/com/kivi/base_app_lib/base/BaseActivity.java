@@ -1,9 +1,14 @@
 package com.kivi.base_app_lib.base;
 
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.kivi.base_app_lib.receiver.NetworkChangedReceiver;
 
 /**
  * @description:
@@ -28,6 +33,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected abstract void bindListener();
 
     protected abstract void customAction();
+
 
     protected <T extends View> T bind(int viewId) {
         return (T) findViewById(viewId);
