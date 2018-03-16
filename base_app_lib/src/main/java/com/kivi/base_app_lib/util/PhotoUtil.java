@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -153,6 +154,26 @@ public class PhotoUtil {
             intent.putExtra(MediaStore.EXTRA_OUTPUT, cropPhotoPath);
             activity.startActivityForResult(intent, cropPhotoCode);
         }
+    }
+
+
+    /**
+     * 缩放图片
+     * @param bitmap    原始bitmap
+     * @param w         宽
+     * @param h         高
+     * @return          缩放后的bitmap
+     */
+    public static Bitmap zoomBitmap(Bitmap bitmap, int w, int h){
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
+        Matrix matrix = new Matrix();
+        float scaleWidth = ((float) w / width);
+        float scaleHeight = ((float) h / height);
+        matrix.postScale(scaleWidth, scaleHeight);
+        Bitmap newBmp = Bitmap.createBitmap(bitmap, 0, 0, width, height,
+                matrix, true);
+        return newBmp;
     }
 
 }
